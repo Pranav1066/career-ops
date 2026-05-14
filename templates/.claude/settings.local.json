@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scan.mjs)",
+      "Bash(node *)",
+      "WebSearch",
+      "Bash(awk '/tracked_companies:/,EOF { *)",
+      "Read(//tmp/**)",
+      "Bash(awk *)",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:apify.com)"
+    ]
+  }
+}

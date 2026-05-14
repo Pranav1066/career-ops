@@ -1,80 +1,91 @@
-# CV -- Sam Rivera
+# PRANAV RAM DS
 
-**Location:** Berlin, Germany (remote-friendly, EU timezones)
-**Email:** sam@example.com
-**LinkedIn:** linkedin.com/in/sam-rivera-example
-**Portfolio:** sam-rivera.example.dev
-**GitHub:** github.com/sam-rivera-example
+**Coimbatore, India** · pranavram106@gmail.com · 7867997369 · [linkedin.com/in/pranav-ram344](https://linkedin.com/in/pranav-ram344) · [github.com/Pranav1066](https://github.com/Pranav1066)
+
+---
 
 ## Professional Summary
 
-Two jobs at once for the last four years: senior AI engineer at a knowledge-graph SaaS (60K LOC of the AI subsystem, agent infra handling 4M+ events/month), and lead instructor at an applied AI bootcamp (5,200 teaching hours, 80 alumni placed into ML/AI roles, 92% completion across 11 cohorts). I keep doing both because the bootcamp work forces me to write code people can actually read, and the production work keeps the curriculum from becoming a fairy tale. I will take a role that is mostly engineering, mostly teaching, or both.
+AI Engineer with hands-on production experience building multi-agent systems, RAG pipelines, and LLM-powered platforms in edtech. Earned Performer of the Month within 30 days at iamneo, delivering 120% of target KPIs and reducing support tickets to zero. Comfortable shipping end-to-end: agent orchestration, hybrid retrieval systems, LLM fine-tuning, full-stack integrations, and multimodal UX. Looking for a role where the stack is modern and the problems are hard.
 
-## Recent engineering (last 12 months)
+---
 
-- Wrote a planner / executor / critic loop on top of LangGraph for the internal agent platform. HITL checkpoints, Redis-backed checkpointer, ~14K LOC TypeScript on Bun. Average task-completion latency went from 9.2s to 5.7s after the executor stopped re-running the planner on retries (this was the bug that cost me a weekend).
-- `agent-skills-kit` (fictional example) is the open source spinoff of the same loop. 2.4K stars, 11 outside contributors. I mostly maintain it on Sundays.
-- 47 merged PRs across two production codebases in the last year. Happy to walk through any of them in an interview, including the ones I would write differently now.
+## Recent Engineering Highlights
+
+- Built and deployed production-grade multi-agent systems using LangGraph, CrewAI, and Agno serving 300+ associates — 98% first-time adoption, zero user-reported issues, 100% on-time delivery throughout the internship.
+- Engineered a Hybrid RAG system combining FAISS semantic search, BM25 keyword search, and cross-encoder reranking — full modular pipeline from PDF ingestion to grounded Gemini answers.
+- Fine-tuned Mistral-7B on GSM8K using QLoRA (4-bit quantization, LoRA rank 16) with HuggingFace Transformers and PEFT, building the full train/evaluate/generate pipeline from scratch.
+- Advanced prompt engineering work improved model relevance by 40% and cut revision cycles by 60% across 5+ platforms at iamneo.
+
+---
 
 ## Work Experience
 
-### Knowledge-Graph SaaS GmbH -- Berlin
-**Senior AI Engineer / Team Lead**
-2022-2026
+### iamneo — Coimbatore
+**AI Engineer (Intern)**
+*September 2025 – March 2026*
 
-- Owned the AI subsystem of a Neo4j-backed enterprise knowledge graph product. The AI layer was 97K LOC at handover; I wrote or rewrote around 60K of that.
-- Embedding pipeline: chunker, dedupe, Azure OpenAI embed, Chroma + Neo4j sync. Throughput was ~50 docs/min when I picked it up. After I rewrote it around batched async and a real connection pool, it sat at 1,800 docs/min in production. The bottleneck the whole time was a single sync HTTP client nobody had thought to look at.
-- Built the agent layer with LangChain and LangGraph using the 12-factor agents pattern. Redis-backed checkpointer, observability through LangSmith. 4M+ agent events/month at peak.
-- Ran a team of three engineers and one designer. Weekly architecture review, pair programming on Tuesdays, an on-call rotation that went from "we don't have one" to a 30-minute response SLO with a written playbook.
-- Built the customer-facing eval dashboard: latency, cost-per-query, hallucination rate, retrieval precision and recall. We walked through it with customers in their monthly business reviews.
+- Earned Performer of the Month within the first 30 days, outperforming 50+ team members and delivering 120% of target KPIs.
+- Developed and deployed production-grade AI solutions using LangGraph, CrewAI, and Agno, serving 300+ associates with 100% on-time delivery, 98% first-time adoption, and zero user-reported issues — reducing support tickets by 100%.
+- Delivered a technical lightning talk on LLM Poisoning to 80+ attendees at the Global AI Community, achieving 95% positive feedback.
+- Integrated advanced prompt engineering to improve model relevance by 40% and reduce revision cycles by 60% across 5+ platforms.
 
-### Applied AI Bootcamp -- Berlin (parallel role, same window)
-**Lead Instructor, AI Engineering Track**
-2022-2026
-
-- Wrote and ran a 4-week AI Engineering curriculum: Bun, TypeScript, LangChain, LangGraph, Redis, Neo4j, LangSmith, MCP, Anthropic SDK. Six cohorts, average size 14.
-- Wrote and ran a 4-week Applied Python for AI curriculum: Python, FastAPI, ChromaDB, Gradio, HuggingFace Transformers, wandb. Five cohorts.
-- 5,200 teaching hours total across both tracks (lecture + lab + 1:1 office hours). I keep a real spreadsheet, not a vibes count.
-- 80 alumni placed into AI/ML engineering roles so far. I personally maintain the outcomes tracker because the school does not.
-- NPS 71. Completion rate 92%, against an industry baseline of 60-75% for intensive bootcamps.
-- Wrote the assessment rubric and the capstone-week format the school later adopted across all technical tracks. I lost an argument about timeboxing the capstone and was right two cohorts later.
-
-### Mid-stage AI Consultancy -- Remote
-**ML Engineer**
-2019-2022
-
-- Nine client engagements: NLP classification, two recommender systems, and two early LLM prototypes back when GPT-3 was the only game in town.
-- Wrote the internal eval harness the rest of the consultancy adopted. Cut "vibes-check" review cycles down to a 20-minute structured CI run.
-- Mentored four junior engineers. Two are now senior ICs at FAANG-tier companies. This is the job where I figured out I liked teaching as much as building.
-
-### Mobile Games Studio -- Remote
-**Backend Engineer**
-2017-2019
-
-- Backend services for a live-ops mobile game: matchmaking, leaderboards, IAP reconciliation. Python, Postgres, Redis.
-- Rewrote the internal SDK onboarding doc. New-hire ramp-up went from three weeks to eight days. The old doc had a 14-step setup that nobody on the current team had actually run end-to-end.
+---
 
 ## Projects
 
-- `agent-skills-kit` (fictional example, open source) -- TypeScript scaffolding for agent skills with HITL approval gates. 2.4K GitHub stars, 11 outside contributors, ~120 weekly active developers. Newsletter mentions in TLDR AI and Ben's Bites.
-- `pplx-embed-local-runner` (fictional example, open source) -- a small local runner for open embedding models with a drop-in OpenAI-compatible API. 610 stars. Three of the bootcamp lab exercises run against it instead of paid APIs.
-- AI Engineering 4-Week Intensive -- the full curriculum: syllabus, 38 lecture scripts, 16 graded projects on Bronze / Silver / Gold / Diamond difficulty tiers. Used in six cohorts. Written by me, debugged by the students.
+### Hybrid RAG — [github.com/Pranav1066/HYBRID_RAG](https://github.com/Pranav1066/HYBRID_RAG)
+
+- Built a fully modular RAG pipeline combining FAISS vector search and BM25 keyword search for hybrid retrieval, with cross-encoder reranking (`ms-marco-MiniLM-L-6-v2`) on top.
+- Used Gemini embeddings for semantic indexing and Gemini as the answer generator, constrained strictly to retrieved PDF context to minimize hallucination.
+- Exposed the pipeline through both a Streamlit chat UI and a FastAPI backend with `/upload` and `/ask` endpoints.
+- Stack: Python, Streamlit, FastAPI, Gemini API, FAISS, BM25 (rank-bm25), Sentence Transformers, PyPDF.
+
+### LLM Fine-Tuning — [github.com/Pranav1066/LLM-Fine-Tuning](https://github.com/Pranav1066/LLM-Fine-Tuning)
+
+- Fine-tuned Mistral-7B-Instruct on the GSM8K math reasoning dataset using QLoRA — 4-bit NF4 quantization via BitsAndBytes, LoRA rank 16 targeting all attention and MLP projection layers.
+- Built the complete training pipeline: dataset formatting, tokenization, PEFT model preparation, HuggingFace `Trainer` integration, and checkpoint saving.
+- Included a `generate.py` for inference and `test.py` for evaluation, making the repo end-to-end runnable.
+- Stack: Python, HuggingFace Transformers, PEFT, BitsAndBytes, PyTorch, datasets.
+
+### iamneo — RAG (Chat with Local Documents)
+*January 2026*
+
+- Engineered a conversational AI system supporting PDFs, scanned documents, Word, and spreadsheets with 95%+ extraction accuracy.
+- Implemented RAG architecture with open-source (Mistral, LLaMA) and proprietary (GPT-4, Claude) LLMs for context-aware document querying.
+- Designed vector database infrastructure using Pinecone/ChromaDB, reducing retrieval latency by 60% and improving response relevance by 40%.
+- Integrated OCR preprocessing for scanned PDFs, enabling text extraction from 10,000+ legacy documents with 90%+ character recognition accuracy.
+
+### iamneo Code Craft — [github.com/Pranav1066/VirtusaAgenticAIHackathon_IAM-23](https://github.com/Pranav1066/VirtusaAgenticAIHackathon_IAM-23)
+*October – November 2025*
+
+- Constructed a modular multi-agent system using LangGraph and Google Gemini to convert user stories into 5–8 deployable microservices per request, reducing backend scaffolding time by ~70%.
+- Implemented fully automated code, OpenAPI (Swagger), and unit test generation — 100% API coverage and 10+ test cases per service through centralized state orchestration.
+- Enabled 8 backend languages and 3 architecture styles (REST, gRPC, event-driven); Streamlit UI generated complete project structures in under 2 minutes.
+
+### Legal AI Platform (LAW) — [github.com/Pranav1066/Law](https://github.com/Pranav1066/Law)
+*May – July 2025*
+
+- Built a full-stack Legal AI platform with FastAPI and React (Vite + TypeScript), using LangChain-based multi-agent orchestration to route 100+ legal queries/day with <1.5s average response time.
+- Implemented high-performance RAG with Pinecone and Azure OpenAI across 1,000+ pages of Indian criminal law PDFs, improving legal answer relevance by ~60% over keyword search.
+- Built multimodal UX with real-time speech-to-text and custom TTS supporting 3+ Indian languages (Tamil, Hindi, English).
+
+---
 
 ## Education
 
-- BSc Computer Science, TU Example (2017)
-- Self-directed: Andrew Ng MLOps specialization, fast.ai Part 1+2, hand-rolled implementations of attention + RAG from scratch.
+**Sri Krishna College of Engineering and Technology** — B.E. Computer Science and Engineering
 
-## Speaking and writing
+**Certifications:** Python for Data Science — NPTEL Elite (Aug 2024)
 
-- "Why your bootcamp's LLM module is wrong" -- BerlinML meetup, 2025. ~120 in the room.
-- "Production agents, the boring parts" -- internal talk at two partner companies. The boring parts are timeouts and idempotency.
-- About 12 long-form blog posts on agent architecture, eval design, and teaching technical material to working engineers. The eval-design one is the only one I'd link unprompted.
+---
 
 ## Skills
 
-Engineering: TypeScript, Python (daily), Go (I can read it and write small things), SQL. LangChain, LangGraph, Anthropic SDK, HuggingFace Transformers/Trainer, scikit-learn, PyTorch (basics, not research-level), MCP. Bun, Node.js, FastAPI, Gradio, Redis, Neo4j, ChromaDB, Postgres, Docker, GitHub Actions. LangSmith, Grafana, custom eval dashboards, wandb.
+**Engineering:** Python (daily), Flask, FastAPI, React, TypeScript, Streamlit, AWS
 
-Teaching: curriculum design with Bronze/Silver/Gold/Diamond difficulty tiering, capstone formats, lab vs lecture split. Delivery: lecture, hands-on lab, 1:1 office hours, code review at scale, pair programming. I have taught working engineers (career-changers), university CS students, and internal teams. Assessment work: rubrics, capstone projects, portfolio review, mock-interview design.
+**AI / ML Stack:** LangChain, LangGraph, CrewAI, Agno, Anthropic SDK, HuggingFace Transformers, PEFT, BitsAndBytes, LLMs (GPT-4, Claude, Mistral, LLaMA, Gemini), RAG, hybrid retrieval, LLM fine-tuning (QLoRA), prompt engineering, OCR, NLP, Computer Vision, Deep Learning, scikit-learn, PyTorch
 
-Other: public speaking in German and English, technical writing, hiring loop design, mentorship.
+**Data & Infra:** Pinecone, ChromaDB, FAISS, BM25, Azure OpenAI, Pandas, Docker
+
+**Languages:** English, Tamil
